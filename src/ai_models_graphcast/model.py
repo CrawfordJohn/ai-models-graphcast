@@ -196,7 +196,7 @@ class GraphcastModel(Model):
                 )
 
             gc.collect()
-
+            training_xarray.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_training_arr.nc")
             if self.debug:
                 training_xarray.to_netcdf("training_xarray.nc")
 
