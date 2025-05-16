@@ -196,7 +196,7 @@ class GraphcastModel(Model):
                 )
 
             gc.collect()
-            training_xarray.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_training_arr.nc")
+            #training_xarray.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_training_arr.nc")
             if self.debug:
                 training_xarray.to_netcdf("training_xarray.nc")
 
@@ -212,8 +212,8 @@ class GraphcastModel(Model):
                     ],
                     **dataclasses.asdict(self.task_config),
                 )
-            input_xr.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_input_arr.nc")
-            forcings.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_forcing_arr.nc")
+            #input_xr.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_input_arr.nc")
+            #forcings.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_forcing_arr.nc")
             if self.debug:
                 input_xr.to_netcdf("input_xr.nc")
                 forcings.to_netcdf("forcings_xr.nc")
@@ -225,7 +225,7 @@ class GraphcastModel(Model):
                 targets_template=template,
                 forcings=forcings,
             )
-            output.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_output_ecm.nc")
+            output.to_netcdf("/content/drive/Shareddrives/Data Science/AI Models/test_forecasts/graphcast_output_ecm2.nc")
             if self.debug:
                 output.to_netcdf("output.nc")
 
